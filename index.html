@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SEO — ciblage local Welkenraedt
+  ============================================================ -->
+  <title>Julie Meessen Institut — Institut de beauté à Welkenraedt</title>
+  <meta name="description" content="Institut de beauté à Welkenraedt. Soins du visage Physiodermie, soins du corps Gemology, massages, épilations et maquillage. Révélez votre beauté naturelle dans un cocon de douceur." />
+  <meta name="keywords" content="institut de beauté Welkenraedt, esthéticienne Welkenraedt, soin visage Welkenraedt, massage Welkenraedt, épilation Welkenraedt" />
+  <link rel="canonical" href="https://www.juliemeessen-institut.be/" />
+
+  <!-- Open Graph (partage Facebook / Instagram) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:title" content="Julie Meessen Institut — Institut de beauté à Welkenraedt" />
+  <meta property="og:description" content="Des soins d'exception pensés pour vous, dans un cocon de douceur. Révélez votre beauté naturelle." />
+  <meta property="og:url" content="https://www.juliemeessen-institut.be/" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+
+  <!-- ============================================================
+       POLICES — auto-hébergées (Dream Avenue + Monterchi),
+       déclarées en @font-face dans css/styles.css
+  ============================================================ -->
+  <link rel="preload" href="assets/fonts/dream-avenue.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Monterchi-Book-trial.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- ============================================================
+       Données structurées — LocalBusiness (référencement local)
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Julie Meessen Institut",
+    "image": "https://www.juliemeessen-institut.be/assets/images/og-image.jpg",
+    "url": "https://www.juliemeessen-institut.be/",
+    "telephone": "+32491945741",
+    "email": "info@juliemeessen-institut.be",
+    "priceRange": "€€",
+    "vatID": "BE1026324237",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue Reine Astrid 64",
+      "postalCode": "4840",
+      "addressLocality": "Welkenraedt",
+      "addressCountry": "BE"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "12:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/juliemeessen.institut/",
+      "https://www.facebook.com/p/Julie-Meessen-Institut-61581154431038/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "28"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Accès rapide clavier (accessibilité) -->
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+
+  <!-- ============================================================
+       HEADER — navigation sticky (transparent → fond au scroll)
+  ============================================================ -->
+  <header class="site-header" id="header" data-header>
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Julie Meessen Institut — accueil">
+        <span class="header__logo-name">Julie Meessen</span>
+        <span class="header__logo-sub">Institut</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu" id="menu-principal">
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="menu-de-soins.html">Menu de soins</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li>
+            <a href="https://salonkee.be/salon/julie-meessen-institut?lang=fr"
+               class="nav-cta" target="_blank" rel="noopener">Réserver</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ==========================================================
+         1. HERO — plein écran, vidéo de fond
+    ========================================================== -->
+    <section class="hero" aria-label="Introduction">
+      <video class="hero__video" autoplay muted loop playsinline
+             poster="assets/images/hero-poster.jpg">
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-reveal>Institut de beauté · Welkenraedt</p>
+        <h1 class="hero__title" data-reveal>Révélez votre<br />beauté naturelle</h1>
+        <p class="hero__lead" data-reveal>
+          Une bulle hors du temps où chaque soin est pensé pour vous,
+          dans un cocon de douceur.
+        </p>
+        <div class="hero__actions" data-reveal>
+          <a href="https://salonkee.be/salon/julie-meessen-institut?lang=fr"
+             class="btn btn--primary" target="_blank" rel="noopener">
+            Prendre rendez-vous
+          </a>
+          <a href="menu-de-soins.html" class="btn btn--ghost">Découvrir les soins</a>
+        </div>
+      </div>
+
+      <a href="#services" class="hero__scroll" aria-label="Défiler vers les soins">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ==========================================================
+         2. SERVICES — aperçu des 6 catégories
+    ========================================================== -->
+    <section class="services" id="services" aria-labelledby="services-titre">
+      <header class="section-head" data-reveal>
+        <p class="section-head__eyebrow">Nos univers</p>
+        <h2 class="section-head__title" id="services-titre">Des soins d'exception</h2>
+        <p class="section-head__intro">
+          Une approche personnalisée, libre à chacun de vivre le soin comme il le ressent.
+        </p>
+      </header>
+
+      <ul class="services__grid">
+        <li class="service-card" data-reveal>
+          <span class="service-card__index">01</span>
+          <h3 class="service-card__title">Soins du visage</h3>
+          <p class="service-card__desc">Méthode Physiodermie : analyse précise de la peau et gestuelles signature.</p>
+          <a href="menu-de-soins.html#visage" class="service-card__link">Voir les soins</a>
+        </li>
+
+        <li class="service-card" data-reveal>
+          <span class="service-card__index">02</span>
+          <h3 class="service-card__title">Soins du corps</h3>
+          <p class="service-card__desc">Rituels Gemology aux pierres précieuses pour un voyage sensoriel unique.</p>
+          <a href="menu-de-soins.html#corps" class="service-card__link">Voir les soins</a>
+        </li>
+
+        <li class="service-card" data-reveal>
+          <span class="service-card__index">03</span>
+          <h3 class="service-card__title">Massages</h3>
+          <p class="service-card__desc">Massages signature aux huiles précieuses pour un relâchement profond.</p>
+          <a href="menu-de-soins.html#massages" class="service-card__link">Voir les soins</a>
+        </li>
+
+        <li class="service-card" data-reveal>
+          <span class="service-card__index">04</span>
+          <h3 class="service-card__title">Épilations</h3>
+          <p class="service-card__desc">Du visage au corps, une peau nette avec délicatesse et précision.</p>
+          <a href="menu-de-soins.html#epilations" class="service-card__link">Voir les soins</a>
+        </li>
+
+        <li class="service-card" data-reveal>
+          <span class="service-card__index">05</span>
+          <h3 class="service-card__title">Mains &amp; pieds</h3>
+          <p class="service-card__desc">Manucure, vernis semi-permanent et soins douceur pour des mains soignées.</p>
+          <a href="menu-de-soins.html#mains" class="service-card__link">Voir les soins</a>
+        </li>
+
+        <li class="service-card" data-reveal>
+          <span class="service-card__index">06</span>
+          <h3 class="service-card__title">Maquillage</h3>
+          <p class="service-card__desc">Maquillage sur-mesure 1944 Paris, teinture et rehaussement des cils.</p>
+          <a href="menu-de-soins.html#maquillage" class="service-card__link">Voir les soins</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==========================================================
+         3. MARQUES PARTENAIRES
+    ========================================================== -->
+    <section class="brands" id="marques" aria-labelledby="brands-titre">
+      <header class="section-head" data-reveal>
+        <p class="section-head__eyebrow">Maisons partenaires</p>
+        <h2 class="section-head__title" id="brands-titre">Une sélection d'exception</h2>
+      </header>
+
+      <ul class="brands__grid">
+        <li class="brand-card" data-reveal>
+          <h3 class="brand-card__name">Physiodermie</h3>
+          <p class="brand-card__origin">Suisse</p>
+          <p class="brand-card__desc">Soins du visage haute performance, respectueux du microbiome cutané.</p>
+        </li>
+        <li class="brand-card" data-reveal>
+          <h3 class="brand-card__name">Gemology</h3>
+          <p class="brand-card__origin">France</p>
+          <p class="brand-card__desc">Soins du corps aux pierres précieuses : grenat, rubis, péridot.</p>
+        </li>
+        <li class="brand-card" data-reveal>
+          <h3 class="brand-card__name">Origine Spa</h3>
+          <p class="brand-card__origin">Massages &amp; bien-être</p>
+          <p class="brand-card__desc">Massages signature aux huiles précieuses pour une détente profonde.</p>
+        </li>
+        <li class="brand-card" data-reveal>
+          <h3 class="brand-card__name">1944 Paris</h3>
+          <p class="brand-card__origin">Maquillage</p>
+          <p class="brand-card__desc">Maquillage professionnel sur-mesure pour toutes les occasions.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==========================================================
+         4. BANDEAU CITATION / PHILOSOPHIE
+    ========================================================== -->
+    <section class="quote" aria-label="Notre philosophie">
+      <blockquote class="quote__text" data-reveal>
+        <p>« Un lieu imaginé et créé avec passion, pour offrir à chacun une véritable parenthèse de bien-être. »</p>
+        <cite>Julie Meessen</cite>
+      </blockquote>
+    </section>
+
+    <!-- ==========================================================
+         5. TÉMOIGNAGES CLIENTS
+         (texte placeholder — à remplacer par de vrais avis Salonkee)
+    ========================================================== -->
+    <section class="testimonials" aria-labelledby="avis-titre">
+      <header class="section-head" data-reveal>
+        <p class="section-head__eyebrow">Elles en parlent</p>
+        <h2 class="section-head__title" id="avis-titre">5/5 sur 28 avis vérifiés</h2>
+      </header>
+
+      <ul class="testimonials__grid">
+        <li class="testimonial" data-reveal>
+          <p class="testimonial__stars" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
+          <p class="testimonial__text">Un accueil chaleureux et un vrai moment de détente. Je ressors apaisée à chaque visite.</p>
+          <p class="testimonial__author">Sophie L.</p>
+        </li>
+        <li class="testimonial" data-reveal>
+          <p class="testimonial__stars" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
+          <p class="testimonial__text">Professionnalisme et résultats visibles dès le premier soin. Je recommande les yeux fermés.</p>
+          <p class="testimonial__author">Marie D.</p>
+        </li>
+        <li class="testimonial" data-reveal>
+          <p class="testimonial__stars" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
+          <p class="testimonial__text">Une vraie bulle hors du temps. Julie est à l'écoute et le cadre est magnifique.</p>
+          <p class="testimonial__author">Caroline V.</p>
+        </li>
+      </ul>
+
+      <p class="testimonials__cta" data-reveal>
+        <a href="https://salonkee.be/salon/julie-meessen-institut" target="_blank" rel="noopener" class="link-underline">
+          Lire tous les avis sur Salonkee
+        </a>
+      </p>
+    </section>
+
+    <!-- ==========================================================
+         6. FEED INSTAGRAM
+         (grille statique → à brancher sur Behold / LightWidget)
+    ========================================================== -->
+    <section class="instagram" aria-labelledby="insta-titre">
+      <header class="section-head" data-reveal>
+        <p class="section-head__eyebrow">Sur Instagram</p>
+        <h2 class="section-head__title" id="insta-titre">@juliemeessen.institut</h2>
+      </header>
+
+      <div class="instagram__carousel" data-reveal>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Publications précédentes">‹</button>
+        <ul class="instagram__track">
+          <!-- Remplacer chaque visuel par les vraies publications (voir Behold dans le README) -->
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-1.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-2.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-3.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-4.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-5.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-6.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+        </ul>
+        <button class="carousel-btn carousel-btn--next" aria-label="Publications suivantes">›</button>
+      </div>
+
+      <p class="instagram__cta" data-reveal>
+        <a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener" class="link-underline">
+          Suivre @juliemeessen.institut
+        </a>
+      </p>
+    </section>
+
+    <!-- ==========================================================
+         7. BANDEAU RÉSERVATION FINAL
+    ========================================================== -->
+    <section class="cta-band" aria-label="Réserver un soin">
+      <div class="cta-band__inner" data-reveal>
+        <h2 class="cta-band__title">Offrez-vous une parenthèse</h2>
+        <p class="cta-band__text">Réservez votre soin en quelques clics, à l'horaire qui vous convient.</p>
+        <a href="https://salonkee.be/salon/julie-meessen-institut?lang=fr"
+           class="btn btn--primary" target="_blank" rel="noopener">
+          Prendre rendez-vous
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER — coordonnées + horaires
+  ============================================================ -->
+  <footer class="site-footer" id="contact">
+    <div class="site-footer__grid">
+
+      <div class="footer-col footer-col--brand">
+        <p class="footer-logo">Julie Meessen <span>Institut</span></p>
+        <p class="footer-tagline">Révélez votre beauté naturelle.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col__title">Coordonnées</h3>
+        <address class="footer-address">
+          Rue Reine Astrid 64<br />
+          4840 Welkenraedt, Belgique<br />
+          <a href="tel:+32491945741">+32 491 94 57 41</a><br />
+          <a href="mailto:info@juliemeessen-institut.be">info@juliemeessen-institut.be</a>
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col__title">Horaires</h3>
+        <dl class="footer-hours">
+          <div><dt>Lundi</dt><dd>12h00 – 21h00</dd></div>
+          <div><dt>Mardi – Vendredi</dt><dd>09h00 – 18h00</dd></div>
+          <div><dt>Samedi</dt><dd>09h00 – 14h00</dd></div>
+          <div><dt>Dimanche</dt><dd>Fermé</dd></div>
+        </dl>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col__title">Suivez-nous</h3>
+        <ul class="footer-social">
+          <li><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/p/Julie-Meessen-Institut-61581154431038/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://salonkee.be/salon/julie-meessen-institut?lang=fr" target="_blank" rel="noopener">Réserver</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© <span data-year>2026</span> Julie Meessen Institut · TVA BE1026324237</p>
+      <p>Stationnement devant l'institut (disque, max 2h).</p>
+    </div>
+  </footer>
+
+  <!-- Scripts (phase suivante) -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

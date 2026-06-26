@@ -79,8 +79,8 @@
   <header class="site-header" id="header" data-header>
     <div class="header__inner">
       <a href="index.html" class="header__logo" aria-label="Julie Meessen Institut — accueil">
-        <span class="header__logo-name">Julie Meessen</span>
-        <span class="header__logo-sub">Institut</span>
+        <img src="assets/images/logo-white.png" alt="Julie Meessen Institut" class="header__logo-img header__logo-img--light" />
+        <img src="assets/images/logo-dark.png" alt="" aria-hidden="true" class="header__logo-img header__logo-img--dark" />
       </a>
 
       <nav class="header__nav" aria-label="Navigation principale">
@@ -148,45 +148,75 @@
 
       <ul class="services__grid">
         <li class="service-card" data-reveal>
-          <span class="service-card__index">01</span>
-          <h3 class="service-card__title">Soins du visage</h3>
-          <p class="service-card__desc">Méthode Physiodermie : analyse précise de la peau et gestuelles signature.</p>
-          <a href="menu-de-soins.html#visage" class="service-card__link">Voir les soins</a>
+          <a class="service-card__media" href="menu-de-soins.html#visage" tabindex="-1" aria-hidden="true">
+            <img src="assets/images/service-visage.webp" alt="Soin du visage en cabine" loading="lazy" />
+          </a>
+          <div class="service-card__body">
+            <span class="service-card__index">01</span>
+            <h3 class="service-card__title">Soins du visage</h3>
+            <p class="service-card__desc">Méthode Physiodermie : analyse précise de la peau et gestuelles signature.</p>
+            <a href="menu-de-soins.html#visage" class="service-card__link">Voir les soins</a>
+          </div>
         </li>
 
         <li class="service-card" data-reveal>
-          <span class="service-card__index">02</span>
-          <h3 class="service-card__title">Soins du corps</h3>
-          <p class="service-card__desc">Rituels Gemology aux pierres précieuses pour un voyage sensoriel unique.</p>
-          <a href="menu-de-soins.html#corps" class="service-card__link">Voir les soins</a>
+          <a class="service-card__media" href="menu-de-soins.html#corps" tabindex="-1" aria-hidden="true">
+            <img src="assets/images/service-corps.webp" alt="Soin du corps" loading="lazy" />
+          </a>
+          <div class="service-card__body">
+            <span class="service-card__index">02</span>
+            <h3 class="service-card__title">Soins du corps</h3>
+            <p class="service-card__desc">Rituels Gemology aux pierres précieuses pour un voyage sensoriel unique.</p>
+            <a href="menu-de-soins.html#corps" class="service-card__link">Voir les soins</a>
+          </div>
         </li>
 
         <li class="service-card" data-reveal>
-          <span class="service-card__index">03</span>
-          <h3 class="service-card__title">Massages</h3>
-          <p class="service-card__desc">Massages signature aux huiles précieuses pour un relâchement profond.</p>
-          <a href="menu-de-soins.html#massages" class="service-card__link">Voir les soins</a>
+          <a class="service-card__media" href="menu-de-soins.html#massages" tabindex="-1" aria-hidden="true">
+            <img src="assets/images/service-massages.webp" alt="Massage relaxant" loading="lazy" />
+          </a>
+          <div class="service-card__body">
+            <span class="service-card__index">03</span>
+            <h3 class="service-card__title">Massages</h3>
+            <p class="service-card__desc">Massages signature aux huiles précieuses pour un relâchement profond.</p>
+            <a href="menu-de-soins.html#massages" class="service-card__link">Voir les soins</a>
+          </div>
         </li>
 
         <li class="service-card" data-reveal>
-          <span class="service-card__index">04</span>
-          <h3 class="service-card__title">Épilations</h3>
-          <p class="service-card__desc">Du visage au corps, une peau nette avec délicatesse et précision.</p>
-          <a href="menu-de-soins.html#epilations" class="service-card__link">Voir les soins</a>
+          <a class="service-card__media" href="menu-de-soins.html#epilations" tabindex="-1" aria-hidden="true">
+            <img src="assets/images/service-epilations.webp" alt="Peau douce et nette" loading="lazy" />
+          </a>
+          <div class="service-card__body">
+            <span class="service-card__index">04</span>
+            <h3 class="service-card__title">Épilations</h3>
+            <p class="service-card__desc">Du visage au corps, une peau nette avec délicatesse et précision.</p>
+            <a href="menu-de-soins.html#epilations" class="service-card__link">Voir les soins</a>
+          </div>
         </li>
 
         <li class="service-card" data-reveal>
-          <span class="service-card__index">05</span>
-          <h3 class="service-card__title">Mains &amp; pieds</h3>
-          <p class="service-card__desc">Manucure, vernis semi-permanent et soins douceur pour des mains soignées.</p>
-          <a href="menu-de-soins.html#mains" class="service-card__link">Voir les soins</a>
+          <a class="service-card__media" href="menu-de-soins.html#mains" tabindex="-1" aria-hidden="true">
+            <img src="assets/images/service-mains.webp" alt="Beauté des mains" loading="lazy" />
+          </a>
+          <div class="service-card__body">
+            <span class="service-card__index">05</span>
+            <h3 class="service-card__title">Mains &amp; pieds</h3>
+            <p class="service-card__desc">Manucure, vernis semi-permanent et soins douceur pour des mains soignées.</p>
+            <a href="menu-de-soins.html#mains" class="service-card__link">Voir les soins</a>
+          </div>
         </li>
 
         <li class="service-card" data-reveal>
-          <span class="service-card__index">06</span>
-          <h3 class="service-card__title">Maquillage</h3>
-          <p class="service-card__desc">Maquillage sur-mesure 1944 Paris, teinture et rehaussement des cils.</p>
-          <a href="menu-de-soins.html#maquillage" class="service-card__link">Voir les soins</a>
+          <a class="service-card__media" href="menu-de-soins.html#maquillage" tabindex="-1" aria-hidden="true">
+            <img src="assets/images/service-maquillage.webp" alt="Maquillage professionnel" loading="lazy" />
+          </a>
+          <div class="service-card__body">
+            <span class="service-card__index">06</span>
+            <h3 class="service-card__title">Maquillage</h3>
+            <p class="service-card__desc">Maquillage sur-mesure 1944 Paris, teinture et rehaussement des cils.</p>
+            <a href="menu-de-soins.html#maquillage" class="service-card__link">Voir les soins</a>
+          </div>
         </li>
       </ul>
     </section>
@@ -283,12 +313,12 @@
         <button class="carousel-btn carousel-btn--prev" aria-label="Publications précédentes">‹</button>
         <ul class="instagram__track">
           <!-- Remplacer chaque visuel par les vraies publications (voir Behold dans le README) -->
-          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-1.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
-          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-2.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
-          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-3.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
-          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-4.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
-          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-5.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
-          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-6.jpg" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-1.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-2.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-3.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-4.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-5.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
+          <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-6.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
         </ul>
         <button class="carousel-btn carousel-btn--next" aria-label="Publications suivantes">›</button>
       </div>

@@ -18,7 +18,11 @@
   <meta property="og:title" content="Julie Meessen Institut — Institut de beauté à Welkenraedt" />
   <meta property="og:description" content="Des soins d'exception pensés pour vous, dans un cocon de douceur. Révélez votre beauté naturelle." />
   <meta property="og:url" content="https://www.juliemeessen-institut.be/" />
-  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:image" content="https://www.juliemeessen-institut.be/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Julie Meessen Institut — Institut de beauté à Welkenraedt" />
+  <meta name="twitter:description" content="Des soins d'exception pensés pour vous, dans un cocon de douceur. Révélez votre beauté naturelle." />
+  <meta name="twitter:image" content="https://www.juliemeessen-institut.be/assets/images/og-image.jpg" />
 
   <!-- ============================================================
        POLICES — auto-hébergées (Dream Avenue + Monterchi),
@@ -28,6 +32,14 @@
   <link rel="preload" href="assets/fonts/Monterchi-Book-trial.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Styles -->
+  <!-- Favicon & manifeste -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#3a3a3a" />
+
   <link rel="stylesheet" href="css/styles.css" />
 
   <!-- ============================================================
@@ -37,20 +49,37 @@
   {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
+    "@id": "https://www.juliemeessen-institut.be/#institut",
     "name": "Julie Meessen Institut",
+    "description": "Institut de beauté à Welkenraedt : soins du visage Physiodermie, soins du corps Gemology, massages, épilations et maquillage.",
     "image": "https://www.juliemeessen-institut.be/assets/images/og-image.jpg",
+    "logo": "https://www.juliemeessen-institut.be/assets/images/logo-dark.png",
     "url": "https://www.juliemeessen-institut.be/",
     "telephone": "+32491945741",
     "email": "info@juliemeessen-institut.be",
     "priceRange": "€€",
+    "currenciesAccepted": "EUR",
     "vatID": "BE1026324237",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rue Reine Astrid 64",
       "postalCode": "4840",
       "addressLocality": "Welkenraedt",
+      "addressRegion": "Liège",
       "addressCountry": "BE"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.660622,
+      "longitude": 5.980170
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Rue+Reine+Astrid+64,+4840+Welkenraedt",
+    "areaServed": [
+      { "@type": "City", "name": "Welkenraedt" },
+      { "@type": "City", "name": "Henri-Chapelle" },
+      { "@type": "City", "name": "Eupen" },
+      { "@type": "City", "name": "Verviers" }
+    ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "12:00", "closes": "21:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
@@ -341,6 +370,36 @@
            class="btn btn--primary" target="_blank" rel="noopener">
           Prendre rendez-vous
         </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         NOUS TROUVER — carte + coordonnées
+    ========================================================== -->
+    <section class="findus" id="nous-trouver" aria-labelledby="findus-titre">
+      <div class="findus__inner">
+        <div class="findus__info" data-reveal>
+          <p class="section-head__eyebrow">Nous trouver</p>
+          <h2 class="section-head__title" id="findus-titre">À Welkenraedt</h2>
+          <address class="findus__address">
+            Rue Reine Astrid 64<br />
+            4840 Welkenraedt, Belgique
+          </address>
+          <dl class="findus__hours">
+            <div><dt>Lundi</dt><dd>12h00 – 21h00</dd></div>
+            <div><dt>Mardi – Vendredi</dt><dd>09h00 – 18h00</dd></div>
+            <div><dt>Samedi</dt><dd>09h00 – 14h00</dd></div>
+            <div><dt>Dimanche</dt><dd>Fermé</dd></div>
+          </dl>
+          <p class="findus__note">Stationnement devant l'institut (disque, max 2h).</p>
+          <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rue+Reine+Astrid+64,+4840+Welkenraedt" target="_blank" rel="noopener">Obtenir l'itinéraire</a>
+        </div>
+        <div class="findus__map" data-reveal>
+          <iframe
+            title="Localisation de Julie Meessen Institut à Welkenraedt"
+            src="https://www.google.com/maps?q=Rue%20Reine%20Astrid%2064,%204840%20Welkenraedt,%20Belgique&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 

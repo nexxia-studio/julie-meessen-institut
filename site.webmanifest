@@ -1,0 +1,14 @@
+{
+  "name": "Julie Meessen Institut",
+  "short_name": "Julie Meessen",
+  "description": "Institut de beauté à Welkenraedt",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f0ee",
+  "theme_color": "#3a3a3a",
+  "icons": [
+    { "src": "/assets/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

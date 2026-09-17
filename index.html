@@ -441,7 +441,7 @@
 
     <!-- ==========================================================
          6. FEED INSTAGRAM
-         (grille statique → à brancher sur Behold / LightWidget)
+         (alimenté par la GitHub Action « Flux Instagram »)
     ========================================================== -->
     <section class="instagram" aria-labelledby="insta-titre">
       <header class="section-head" data-reveal>
@@ -451,8 +451,9 @@
 
       <div class="instagram__carousel" data-reveal>
         <button class="carousel-btn carousel-btn--prev" aria-label="Publications précédentes">‹</button>
-        <ul class="instagram__track">
-          <!-- Remplacer chaque visuel par les vraies publications (voir Behold dans le README) -->
+        <ul class="instagram__track" data-instagram-feed>
+          <!-- Visuels de repli : remplacés à l'exécution par assets/instagram.json,
+               alimenté par .github/workflows/instagram.yml -->
           <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-1.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
           <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-2.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>
           <li class="instagram__item"><a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener"><img src="assets/images/insta-3.webp" alt="Publication Instagram de l'institut" loading="lazy" /></a></li>

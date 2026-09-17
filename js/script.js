@@ -124,6 +124,46 @@
     });
   });
 
+
+  /* ---------- 8. FLUX INSTAGRAM ---------- */
+  /* Les publications sont récupérées au build par une GitHub Action et
+     versionnées dans le dépôt. On lit un JSON local : aucune requête vers
+     Instagram, aucun cookie tiers. Si le fichier manque ou échoue, les
+     visuels codés en dur dans le HTML restent affichés. */
+  const igTrack = document.querySelector('[data-instagram-feed]');
+  if (igTrack) {
+    fetch('assets/instagram.json', { cache: 'no-cache' })
+      .then(r => (r.ok ? r.json() : Promise.reject(new Error(r.status))))
+      .then(data => {
+        const posts = (data && data.posts) || [];
+        if (!posts.length) return;
+        igTrack.replaceChildren(...posts.map(post => {
+          const li = document.createElement('li');
+          li.className = 'instagram__item';
+          const a = document.createElement('a');
+          a.href = post.permalink;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          const img = document.createElement('img');
+          img.src = post.image;
+          img.alt = post.alt || 'Publication Instagram de l\'institut';
+          img.loading = 'lazy';
+          img.width = 640;
+          img.height = 640;
+          a.appendChild(img);
+          if (post.isVideo) {
+            const badge = document.createElement('span');
+            badge.className = 'instagram__video';
+            badge.setAttribute('aria-hidden', 'true');
+            a.appendChild(badge);
+          }
+          li.appendChild(a);
+          return li;
+        }));
+      })
+      .catch(() => { /* on garde les visuels de repli */ });
+  }
+
   /* ---------- 5. ANNÉE COURANTE (footer) ---------- */
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

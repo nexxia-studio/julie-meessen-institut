@@ -1,0 +1,66 @@
+name: Flux Instagram
+
+# Récupère les dernières publications et les versionne dans le dépôt.
+# Le site reste statique : aucune requête vers Instagram côté visiteur.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'      # tous les jours à 04h17 UTC
+  workflow_dispatch:           # déclenchement manuel depuis l'onglet Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-feed
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installer sharp
+        run: npm install --no-save --no-audit --no-fund sharp
+
+      - name: Récupérer les publications
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_COUNT: '6'
+        run: node scripts/fetch-instagram.mjs
+
+      # Le token Instagram expire au bout de 60 jours. On réécrit le secret
+      # à chaque passage pour qu'il ne périme jamais.
+      # Nécessite un PAT GH_PAT avec la permission « Secrets : write ».
+      # Sans ce secret, l'étape est simplement ignorée.
+      - name: Prolonger le token
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "GH_PAT absent — prolongation ignorée."
+          elif [ -f .ig-token-refreshed ]; then
+            gh secret set IG_TOKEN --body "$(cat .ig-token-refreshed)" --repo "$GITHUB_REPOSITORY"
+            echo "Token prolongé."
+          fi
+
+      - name: Nettoyer
+        if: always()
+        run: rm -f .ig-token-refreshed
+
+      - name: Committer si le flux a changé
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/instagram.json assets/images/instagram
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "chore: flux Instagram mis à jour"
+            git push
+          fi

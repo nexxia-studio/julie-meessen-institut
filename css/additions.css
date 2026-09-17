@@ -345,3 +345,26 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
   fill: currentColor;
   stroke: none;
 }
+
+/* ---------- Flux Instagram : pastille vidéo ----------------- */
+.instagram__item { position: relative; }
+.instagram__video {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(28, 26, 25, .55);
+  backdrop-filter: blur(2px);
+}
+.instagram__video::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-left: 7px solid var(--cream);
+  border-top: 4.5px solid transparent;
+  border-bottom: 4.5px solid transparent;
+}

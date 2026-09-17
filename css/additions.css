@@ -399,3 +399,59 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
 .hero__title,
 .hero__lead,
 .hero__eyebrow { text-shadow: 0 1px 24px rgba(28, 26, 25, .45); }
+
+/* ============================================================
+   8. MARQUES — logo révélé au survol
+   ============================================================ */
+/* Au repos la card reste telle quelle. Au survol elle passe au blanc,
+   le texte s'efface et le logo de la maison apparaît. Le texte reste
+   dans le DOM : les lecteurs d'écran et Google le lisent normalement. */
+.brand-card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 210px;
+}
+.brand-card__body { transition: opacity .4s var(--ease); }
+
+.brand-card__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.94);
+  width: min(62%, 190px);
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s var(--ease), transform .55s var(--ease);
+}
+
+.brand-card:hover,
+.brand-card:focus-within { background: var(--nacre, #fff); }
+.brand-card:hover .brand-card__body,
+.brand-card:focus-within .brand-card__body { opacity: 0; }
+.brand-card:hover .brand-card__logo,
+.brand-card:focus-within .brand-card__logo {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Sans survol (tactile), le logo n'apparaîtrait jamais : on l'affiche
+   discrètement sous le texte plutôt que de le cacher pour de bon. */
+@media (hover: none) {
+  .brand-card { min-height: 0; }
+  .brand-card__logo {
+    position: static;
+    transform: none;
+    opacity: .55;
+    width: min(55%, 150px);
+    margin-top: 1.4rem;
+  }
+  .brand-card:hover .brand-card__body { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-card__body,
+  .brand-card__logo { transition: opacity .01ms; }
+  .brand-card__logo { transform: translate(-50%, -50%); }
+}

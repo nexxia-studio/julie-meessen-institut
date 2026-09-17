@@ -9,7 +9,6 @@
   ============================================================ -->
   <title>Julie Meessen Institut — Institut de beauté à Welkenraedt</title>
   <meta name="description" content="Institut de beauté à Welkenraedt. Soins du visage Physiodermie, soins du corps Gemology, massages, épilations et maquillage. Révélez votre beauté naturelle dans un cocon de douceur." />
-  <meta name="keywords" content="institut de beauté Welkenraedt, esthéticienne Welkenraedt, soin visage Welkenraedt, massage Welkenraedt, épilation Welkenraedt" />
   <link rel="canonical" href="https://www.juliemeessen-institut.be/" />
 
   <!-- Open Graph (partage Facebook / Instagram) -->
@@ -25,11 +24,11 @@
   <meta name="twitter:image" content="https://www.juliemeessen-institut.be/assets/images/og-image.jpg" />
 
   <!-- ============================================================
-       POLICES — auto-hébergées (Dream Avenue + Monterchi),
-       déclarées en @font-face dans css/styles.css
+       POLICES — auto-hébergées (Dream Avenue + EB Garamond),
+       déclarées en @font-face dans css/styles.css et css/additions.css
   ============================================================ -->
   <link rel="preload" href="assets/fonts/dream-avenue.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/Monterchi-Book-trial.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Styles -->
   <!-- Favicon & manifeste -->
@@ -41,6 +40,7 @@
   <meta name="theme-color" content="#3a3a3a" />
 
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/additions.css" />
 
   <!-- ============================================================
        Données structurées — LocalBusiness (référencement local)
@@ -48,52 +48,145 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BeautySalon",
-    "@id": "https://www.juliemeessen-institut.be/#institut",
-    "name": "Julie Meessen Institut",
-    "description": "Institut de beauté à Welkenraedt : soins du visage Physiodermie, soins du corps Gemology, massages, épilations et maquillage.",
-    "image": "https://www.juliemeessen-institut.be/assets/images/og-image.jpg",
-    "logo": "https://www.juliemeessen-institut.be/assets/images/logo-dark.png",
-    "url": "https://www.juliemeessen-institut.be/",
-    "telephone": "+32491945741",
-    "email": "info@juliemeessen-institut.be",
-    "priceRange": "€€",
-    "currenciesAccepted": "EUR",
-    "vatID": "BE1026324237",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rue Reine Astrid 64",
-      "postalCode": "4840",
-      "addressLocality": "Welkenraedt",
-      "addressRegion": "Liège",
-      "addressCountry": "BE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 50.660622,
-      "longitude": 5.980170
-    },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Rue+Reine+Astrid+64,+4840+Welkenraedt",
-    "areaServed": [
-      { "@type": "City", "name": "Welkenraedt" },
-      { "@type": "City", "name": "Henri-Chapelle" },
-      { "@type": "City", "name": "Eupen" },
-      { "@type": "City", "name": "Verviers" }
-    ],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "12:00", "closes": "21:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/juliemeessen.institut/",
-      "https://www.facebook.com/p/Julie-Meessen-Institut-61581154431038/"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "28"
-    }
+    "@graph": [
+      {
+        "@type": "BeautySalon",
+        "@id": "https://www.juliemeessen-institut.be/#institut",
+        "name": "Julie Meessen Institut",
+        "description": "Institut de beauté à Welkenraedt : soins du visage Méthode Physiodermie, rituels corps Gemology, massages, épilations, beauté des mains et des pieds et maquillage 1944 Paris.",
+        "image": "https://www.juliemeessen-institut.be/assets/images/og-image.jpg",
+        "logo": "https://www.juliemeessen-institut.be/assets/images/logo-dark.png",
+        "url": "https://www.juliemeessen-institut.be/",
+        "telephone": "+32491945741",
+        "email": "info@juliemeessen-institut.be",
+        "priceRange": "€€",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Bancontact, Espèces, Chèque-cadeau",
+        "knowsLanguage": "fr",
+        "vatID": "BE1026324237",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://www.juliemeessen-institut.be/#julie",
+          "name": "Julie Meessen",
+          "jobTitle": "Esthéticienne",
+          "worksFor": { "@id": "https://www.juliemeessen-institut.be/#institut" }
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rue Reine Astrid 64",
+          "postalCode": "4840",
+          "addressLocality": "Welkenraedt",
+          "addressRegion": "Liège",
+          "addressCountry": "BE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.660644,
+          "longitude": 5.9801354
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Rue+Reine+Astrid+64,+4840+Welkenraedt",
+        "areaServed": [
+          { "@type": "City", "name": "Welkenraedt" },
+          { "@type": "City", "name": "Henri-Chapelle" },
+          { "@type": "City", "name": "Baelen" },
+          { "@type": "City", "name": "Lontzen" },
+          { "@type": "City", "name": "Herve" },
+          { "@type": "City", "name": "Aubel" },
+          { "@type": "City", "name": "Thimister-Clermont" },
+          { "@type": "City", "name": "Limbourg" },
+          { "@type": "City", "name": "Plombières" },
+          { "@type": "City", "name": "Eupen" },
+          { "@type": "City", "name": "Verviers" }
+        ],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",    "opens": "12:00", "closes": "21:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Friday"], "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "09:00", "closes": "14:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Sunday"], "opens": "00:00", "closes": "00:00" }
+        ],
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "name": "Réserver un soin en ligne",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://salonkee.be/salon/julie-meessen-institut?lang=fr",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          },
+          "result": { "@type": "Reservation", "name": "Rendez-vous à l'institut" }
+        },
+        "sameAs": [
+          "https://www.instagram.com/juliemeessen.institut/",
+          "https://www.facebook.com/p/Julie-Meessen-Institut-61581154431038/",
+          "https://salonkee.be/salon/julie-meessen-institut"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.juliemeessen-institut.be/#site",
+        "url": "https://www.juliemeessen-institut.be/",
+        "name": "Julie Meessen Institut",
+        "inLanguage": "fr-BE",
+        "publisher": { "@id": "https://www.juliemeessen-institut.be/#institut" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.juliemeessen-institut.be/#accueil",
+        "url": "https://www.juliemeessen-institut.be/",
+        "name": "Julie Meessen Institut — Institut de beauté à Welkenraedt",
+        "isPartOf": { "@id": "https://www.juliemeessen-institut.be/#site" },
+        "about": { "@id": "https://www.juliemeessen-institut.be/#institut" },
+        "inLanguage": "fr-BE"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.juliemeessen-institut.be/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Où se trouve Julie Meessen Institut et où se garer ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'institut se situe Rue Reine Astrid 64, à 4840 Welkenraedt, en province de Liège. Le stationnement se fait directement devant l'institut, en zone bleue : disque obligatoire, deux heures maximum. Trois marches donnent accès à l'entrée ; le reste de l'institut est de plain-pied."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Faut-il réserver à l'avance ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, l'institut fonctionne uniquement sur rendez-vous. La réservation se fait en ligne sur Salonkee, à toute heure, ou par téléphone au 0491 94 57 41. Les soins de 90 minutes et les maquillages de mariage se réservent idéalement plusieurs semaines à l'avance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps dure un soin du visage et combien coûte-t-il ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les soins du visage durent de 30 à 90 minutes, pour un tarif de 45 à 130 euros. Le Soin Radiance dure 30 minutes et coûte 45 euros ; le Soin Chrono Repair, anti-âge, dure 90 minutes et coûte 130 euros. Une cure de quatre soins bénéficie de 15 % de réduction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce que la Méthode Physiodermie ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La Méthode Physiodermie est une approche suisse des soins du visage qui commence par une analyse précise de la peau. Plutôt que de traiter un symptôme isolé, elle cible la cause et respecte l'équilibre du microbiome cutané, en combinant actifs ciblés et gestuelles manuelles spécifiques."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quels moyens de paiement sont acceptés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'institut accepte le Bancontact, les espèces et les chèques-cadeaux de l'institut. Les cartes de crédit et les éco-chèques ne sont pas acceptés. Un chèque-cadeau peut être commandé pour n'importe quel soin ou pour un montant libre, directement à l'institut."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -136,10 +229,9 @@
          1. HERO — plein écran, vidéo de fond
     ========================================================== -->
     <section class="hero" aria-label="Introduction">
-      <video class="hero__video" autoplay muted loop playsinline
-             poster="assets/images/hero-poster.jpg">
-        <source src="assets/videos/hero.mp4" type="video/mp4" />
-      </video>
+      <video class="hero__video" autoplay muted loop playsinline preload="none"
+             poster="assets/images/hero-poster.jpg" data-hero-video
+             data-src="assets/videos/hero.mp4"></video>
       <div class="hero__overlay" aria-hidden="true"></div>
 
       <div class="hero__content">
@@ -294,30 +386,29 @@
     </section>
 
     <!-- ==========================================================
-         5. TÉMOIGNAGES CLIENTS
-         (texte placeholder — à remplacer par de vrais avis Salonkee)
+         5. AVIS CLIENTS — avis Google réels, cités mot pour mot
     ========================================================== -->
     <section class="testimonials" aria-labelledby="avis-titre">
       <header class="section-head" data-reveal>
         <p class="section-head__eyebrow">Elles en parlent</p>
-        <h2 class="section-head__title" id="avis-titre">5/5 sur 28 avis vérifiés</h2>
+        <h2 class="section-head__title" id="avis-titre">5,0 sur Google et sur Salonkee</h2>
       </header>
 
       <ul class="testimonials__grid">
         <li class="testimonial" data-reveal>
           <p class="testimonial__stars" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
-          <p class="testimonial__text">Un accueil chaleureux et un vrai moment de détente. Je ressors apaisée à chaque visite.</p>
-          <p class="testimonial__author">Sophie L.</p>
+          <p class="testimonial__text">Je me suis rendue dans cet institut à plusieurs reprises pour différents massages. J'ai, à chaque fois, été conquise par les prestations réalisées avec professionnalisme, écoute et bienveillance. Un vrai moment de bien-être hors du temps.</p>
+          <p class="testimonial__author">Pauline R. <span class="testimonial__source">Avis Google</span></p>
         </li>
         <li class="testimonial" data-reveal>
           <p class="testimonial__stars" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
-          <p class="testimonial__text">Professionnalisme et résultats visibles dès le premier soin. Je recommande les yeux fermés.</p>
-          <p class="testimonial__author">Marie D.</p>
+          <p class="testimonial__text">Julie a réalisé mon maquillage à l'occasion de mon mariage. Elle a écouté toutes mes demandes, elle a fait un travail magnifique, mon teint est resté mat comme je le voulais toute la journée, aucune retouche à faire. C'est une esthéticienne très professionnelle, agréable et douce.</p>
+          <p class="testimonial__author">Justine G. <span class="testimonial__source">Avis Google</span></p>
         </li>
         <li class="testimonial" data-reveal>
           <p class="testimonial__stars" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
-          <p class="testimonial__text">Une vraie bulle hors du temps. Julie est à l'écoute et le cadre est magnifique.</p>
-          <p class="testimonial__author">Caroline V.</p>
+          <p class="testimonial__text">En un seul mot : parfaite ! Elle a écouté mes envies pour le maquillage lors de mon mariage. Il devait être discret mais raffiné et le résultat était top ! Très professionnelle, qui connaît ses produits et qui conseille au mieux en fonction du type de peau !</p>
+          <p class="testimonial__author">Héloïse D. <span class="testimonial__source">Avis Google</span></p>
         </li>
       </ul>
 
@@ -360,6 +451,43 @@
     </section>
 
     <!-- ==========================================================
+         FAQ — contenu visible, repris à l'identique dans le FAQPage
+    ========================================================== -->
+    <section class="faq" id="faq" aria-labelledby="faq-titre">
+      <header class="section-head" data-reveal>
+        <p class="section-head__eyebrow">Questions fréquentes</p>
+        <h2 class="section-head__title" id="faq-titre">Tout ce qu'il faut savoir</h2>
+      </header>
+
+      <div class="faq__list" data-reveal>
+        <details class="faq__item">
+          <summary class="faq__q">Où se trouve Julie Meessen Institut et où se garer&nbsp;?</summary>
+          <div class="faq__a"><p>L'institut se situe Rue Reine Astrid 64, à 4840 Welkenraedt, en province de Liège. Le stationnement se fait directement devant l'institut, en zone bleue&nbsp;: disque obligatoire, deux heures maximum. Trois marches donnent accès à l'entrée&nbsp;; le reste de l'institut est de plain-pied.</p></div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Faut-il réserver à l'avance&nbsp;?</summary>
+          <div class="faq__a"><p>Oui, l'institut fonctionne uniquement sur rendez-vous. La réservation se fait en ligne sur Salonkee, à toute heure, ou par téléphone au 0491 94 57 41. Les soins de 90 minutes et les maquillages de mariage se réservent idéalement plusieurs semaines à l'avance.</p></div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Combien de temps dure un soin du visage et combien coûte-t-il&nbsp;?</summary>
+          <div class="faq__a"><p>Les soins du visage durent de 30 à 90 minutes, pour un tarif de 45 à 130 euros. Le Soin Radiance dure 30 minutes et coûte 45 euros&nbsp;; le Soin Chrono Repair, anti-âge, dure 90 minutes et coûte 130 euros. Une cure de quatre soins bénéficie de 15 % de réduction.</p></div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Qu'est-ce que la Méthode Physiodermie&nbsp;?</summary>
+          <div class="faq__a"><p>La Méthode Physiodermie est une approche suisse des soins du visage qui commence par une analyse précise de la peau. Plutôt que de traiter un symptôme isolé, elle cible la cause et respecte l'équilibre du microbiome cutané, en combinant actifs ciblés et gestuelles manuelles spécifiques.</p></div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Quels moyens de paiement sont acceptés&nbsp;?</summary>
+          <div class="faq__a"><p>L'institut accepte le Bancontact, les espèces et les chèques-cadeaux de l'institut. Les cartes de crédit et les éco-chèques ne sont pas acceptés. Un chèque-cadeau peut être commandé pour n'importe quel soin ou pour un montant libre, directement à l'institut.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ==========================================================
          7. BANDEAU RÉSERVATION FINAL
     ========================================================== -->
     <section class="cta-band" aria-label="Réserver un soin">
@@ -387,18 +515,23 @@
           </address>
           <dl class="findus__hours">
             <div><dt>Lundi</dt><dd>12h00 – 21h00</dd></div>
-            <div><dt>Mardi – Vendredi</dt><dd>09h00 – 18h00</dd></div>
+            <div><dt>Mardi – Mercredi</dt><dd>09h00 – 18h00</dd></div>
+            <div><dt>Jeudi</dt><dd>Fermé</dd></div>
+            <div><dt>Vendredi</dt><dd>09h00 – 18h00</dd></div>
             <div><dt>Samedi</dt><dd>09h00 – 14h00</dd></div>
             <div><dt>Dimanche</dt><dd>Fermé</dd></div>
           </dl>
-          <p class="findus__note">Stationnement devant l'institut (disque, max 2h).</p>
+          <p class="findus__note">Stationnement devant l'institut (zone bleue, disque, max 2h). Trois marches à l'entrée&nbsp;; le reste de l'institut est de plain-pied.</p>
           <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rue+Reine+Astrid+64,+4840+Welkenraedt" target="_blank" rel="noopener">Obtenir l'itinéraire</a>
         </div>
         <div class="findus__map" data-reveal>
-          <iframe
-            title="Localisation de Julie Meessen Institut à Welkenraedt"
-            src="https://www.google.com/maps?q=Rue%20Reine%20Astrid%2064,%204840%20Welkenraedt,%20Belgique&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="map-facade" data-map-facade
+               data-map-src="https://www.google.com/maps?q=Rue%20Reine%20Astrid%2064,%204840%20Welkenraedt,%20Belgique&amp;output=embed"
+               data-map-title="Localisation de Julie Meessen Institut à Welkenraedt">
+            <img src="assets/images/map-welkenraedt.webp" alt="Plan de situation de l'institut, Rue Reine Astrid 64 à Welkenraedt" loading="lazy" width="800" height="600" />
+            <button type="button" class="map-facade__btn">Afficher la carte</button>
+            <p class="map-facade__note">En affichant la carte, vous acceptez le dépôt de cookies par Google Maps.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -430,7 +563,9 @@
         <h3 class="footer-col__title">Horaires</h3>
         <dl class="footer-hours">
           <div><dt>Lundi</dt><dd>12h00 – 21h00</dd></div>
-          <div><dt>Mardi – Vendredi</dt><dd>09h00 – 18h00</dd></div>
+          <div><dt>Mardi – Mercredi</dt><dd>09h00 – 18h00</dd></div>
+          <div><dt>Jeudi</dt><dd>Fermé</dd></div>
+          <div><dt>Vendredi</dt><dd>09h00 – 18h00</dd></div>
           <div><dt>Samedi</dt><dd>09h00 – 14h00</dd></div>
           <div><dt>Dimanche</dt><dd>Fermé</dd></div>
         </dl>
@@ -448,8 +583,11 @@
     </div>
 
     <div class="site-footer__bottom">
-      <p>© <span data-year>2026</span> Julie Meessen Institut · TVA BE1026324237</p>
-      <p>Stationnement devant l'institut (disque, max 2h).</p>
+      <p>© <span data-year>2026</span> Julie Meessen Institut · TVA BE 1026.324.237</p>
+      <ul class="footer-legal">
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="politique-de-confidentialite.html">Politique de confidentialité</a></li>
+      </ul>
     </div>
   </footer>
 

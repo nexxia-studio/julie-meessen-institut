@@ -85,6 +85,45 @@
     updateBtns();
   }
 
+
+  /* ---------- 6. VIDÉO HERO : source attachée après le 1er paint ---------- */
+  /* L'autoplay est conservé ; on évite simplement que la vidéo entre en
+     concurrence avec le LCP au chargement. */
+  const heroVideo = document.querySelector('[data-hero-video]');
+  if (heroVideo && heroVideo.dataset.src) {
+    const loadHero = () => {
+      if (heroVideo.querySelector('source')) return;
+      const src = document.createElement('source');
+      src.src = heroVideo.dataset.src;
+      src.type = 'video/mp4';
+      heroVideo.appendChild(src);
+      heroVideo.load();
+      const play = heroVideo.play();
+      if (play && play.catch) play.catch(() => {});
+    };
+    if (document.readyState === 'complete') {
+      requestAnimationFrame(loadHero);
+    } else {
+      window.addEventListener('load', () => requestAnimationFrame(loadHero), { once: true });
+    }
+  }
+
+  /* ---------- 7. CARTE GOOGLE : chargement au clic ---------- */
+  /* Aucune requête vers Google (ni cookie) avant action de la visiteuse. */
+  document.querySelectorAll('[data-map-facade]').forEach(facade => {
+    const btn = facade.querySelector('.map-facade__btn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = facade.dataset.mapSrc;
+      iframe.title = facade.dataset.mapTitle || 'Carte';
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.allowFullscreen = true;
+      facade.replaceChildren(iframe);
+    });
+  });
+
   /* ---------- 5. ANNÉE COURANTE (footer) ---------- */
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

@@ -234,3 +234,114 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
   background: repeating-linear-gradient(45deg, var(--cream-2) 0 14px, var(--cream) 14px 28px);
 }
 .map-facade img { background: var(--cream-2); }
+
+/* ============================================================
+   6. CORRECTIFS D'INTERFACE
+   ============================================================ */
+
+/* ---------- Bouton fantôme : lisibilité au survol ----------- */
+/* `background: currentColor` + `color: var(--ink)` résolvaient tous
+   deux vers --ink : texte sombre sur fond sombre. On fixe les deux
+   couleurs explicitement. */
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+}
+.hero__actions .btn--ghost:hover,
+.hero__actions .btn--ghost:focus-visible {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+}
+
+/* ---------- Police de labeur là où le display était utilisé -- */
+/* Avis et questions de FAQ passent en EB Garamond. */
+.testimonial__text,
+.faq__q {
+  font-family: var(--font-body);
+}
+.testimonial__text { font-size: 1.12rem; line-height: 1.62; font-weight: 400; }
+.faq__q { font-weight: 400; }
+
+.testimonial__source {
+  display: block;
+  margin-top: .3rem;
+  font-size: .74rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Marques : seconde rangée ------------------------ */
+.brands__label {
+  max-width: var(--container);
+  margin: 0 auto .9rem;
+  padding-inline: var(--gutter);
+  font-size: .72rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.brands__label + .brands__grid { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+.brands__grid--three { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 1024px) {
+  .brands__grid--three { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .brands__grid--three { grid-template-columns: 1fr; }
+}
+
+/* ---------- Footer : colonne horaires sur une seule ligne ---- */
+.site-footer__grid { grid-template-columns: 1.25fr 1fr 1.3fr .55fr; }
+.footer-hours dt,
+.footer-hours dd { white-space: nowrap; }
+.footer-hours div { gap: 1.5rem; }
+
+@media (max-width: 1024px) {
+  .site-footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .site-footer__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Footer : réseaux en icônes ---------------------- */
+.footer-social--icons {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-social--icons li { padding: 0; }
+.footer-social--icons a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line-light);
+  border-radius: 50%;
+  color: rgba(245, 240, 238, .85);
+  transition: color .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
+}
+.footer-social--icons a:hover,
+.footer-social--icons a:focus-visible {
+  color: var(--ink);
+  background: var(--cream);
+  border-color: var(--cream);
+}
+.footer-social--icons svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.footer-social--icons svg .is-filled {
+  fill: currentColor;
+  stroke: none;
+}

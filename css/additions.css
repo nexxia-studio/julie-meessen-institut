@@ -463,7 +463,6 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
    univers puis sept maisons, un par écran. On repasse à deux colonnes
    et on resserre la typographie en conséquence. */
 @media (max-width: 720px) {
-  .services__grid,
   .brands__grid,
   .brands__grid--three { grid-template-columns: repeat(2, 1fr); }
 
@@ -482,7 +481,6 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
 
 /* Très petits écrans : on revient à une colonne, deux seraient illisibles. */
 @media (max-width: 380px) {
-  .services__grid,
   .brands__grid,
   .brands__grid--three { grid-template-columns: 1fr; }
 }
@@ -595,3 +593,84 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
 .prose { max-width: 720px; margin: 0 auto; padding-inline: var(--gutter); }
 .prose p { font-weight: 300; line-height: 1.85; margin-bottom: 1.2rem; }
 .prose p.prose__lead { font-size: 1.12rem; color: var(--ink); }
+
+/* ============================================================
+   11. CARROUSELS MOBILE — univers et avis
+   ============================================================ */
+/* Sur smartphone, six univers puis trois avis empilés faisaient une page
+   interminable. Défilement horizontal natif avec accroche : le pouce
+   fait le travail, et une bande de la card suivante reste visible pour
+   indiquer qu'il y a une suite. */
+@media (max-width: 720px) {
+  .services__grid,
+  .testimonials__grid {
+    display: flex;
+    grid-template-columns: none;
+    max-width: none;
+    margin-inline: 0;
+    gap: .9rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    padding-inline: var(--gutter);
+    padding-bottom: .4rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .services__grid::-webkit-scrollbar,
+  .testimonials__grid::-webkit-scrollbar { display: none; }
+
+  .services__grid > .service-card,
+  .testimonials__grid > .testimonial {
+    flex: 0 0 78%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  .testimonials__grid > .testimonial { display: flex; flex-direction: column; }
+
+  /* Le décalage d'apparition n'a plus de sens sur une seule ligne */
+  .services__grid [data-reveal] { transition-delay: 0ms; }
+}
+
+/* ---------- Commandes du carrousel -------------------------- */
+.carousel-ui {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.1rem;
+  padding-inline: var(--gutter);
+}
+@media (max-width: 720px) { .carousel-ui { display: flex; } }
+
+.carousel-dots { display: flex; gap: .45rem; }
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--line);
+  cursor: pointer;
+  transition: background .3s var(--ease), transform .3s var(--ease);
+}
+.carousel-dot[aria-current="true"] { background: var(--accent); transform: scale(1.35); }
+
+/* Bouton pause : exigé dès qu'un contenu défile seul plus de cinq secondes */
+.carousel-pause {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .3s var(--ease), border-color .3s var(--ease);
+}
+.carousel-pause:hover,
+.carousel-pause:focus-visible { color: var(--ink); border-color: var(--accent); }
+.carousel-pause svg { width: 11px; height: 11px; fill: currentColor; }

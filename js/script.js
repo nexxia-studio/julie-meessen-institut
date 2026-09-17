@@ -164,6 +164,118 @@
       .catch(() => { /* on garde les visuels de repli */ });
   }
 
+
+  /* ---------- 9. CARROUSELS MOBILE ---------- */
+  /* Défilement natif + avance automatique douce. L'avance s'arrête dès
+     que la visiteuse touche le carrousel, quand il sort de l'écran, et
+     elle ne démarre pas du tout si le système demande moins d'animations.
+     Un bouton pause est fourni : c'est ce qu'exige le critère WCAG 2.2.1
+     pour tout contenu qui défile seul plus de cinq secondes. */
+  const ICON_PAUSE = '<svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1.5" width="3" height="9" rx="1"/><rect x="7" y="1.5" width="3" height="9" rx="1"/></svg>';
+  const ICON_PLAY  = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.6v8.8L10 6z"/></svg>';
+
+  function initCarousel(track, label) {
+    if (!track) return;
+    const slides = Array.from(track.children);
+    if (slides.length < 2) return;
+
+    const mq = window.matchMedia('(max-width: 720px)');
+    const ui = document.createElement('div');
+    ui.className = 'carousel-ui';
+
+    const dots = document.createElement('div');
+    dots.className = 'carousel-dots';
+    dots.setAttribute('role', 'tablist');
+    dots.setAttribute('aria-label', label);
+    slides.forEach((slide, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'carousel-dot';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-label', `Aller à l'élément ${i + 1} sur ${slides.length}`);
+      b.addEventListener('click', () => { stop(); goTo(i); });
+      dots.appendChild(b);
+    });
+
+    const pause = document.createElement('button');
+    pause.type = 'button';
+    pause.className = 'carousel-pause';
+    pause.innerHTML = ICON_PAUSE;
+    pause.setAttribute('aria-label', 'Mettre le défilement en pause');
+
+    ui.append(dots, pause);
+    track.parentNode.insertBefore(ui, track.nextSibling);
+
+    let timer = null, running = false, index = 0;
+
+    const current = () => {
+      const c = track.scrollLeft + track.clientWidth / 2;
+      let best = 0, dist = Infinity;
+      slides.forEach((s, i) => {
+        const d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - c);
+        if (d < dist) { dist = d; best = i; }
+      });
+      return best;
+    };
+
+    const paint = () => {
+      index = current();
+      Array.from(dots.children).forEach((d, i) =>
+        d.setAttribute('aria-current', String(i === index)));
+    };
+
+    function goTo(i) {
+      const s = slides[(i + slides.length) % slides.length];
+      track.scrollTo({
+        left: s.offsetLeft - (track.clientWidth - s.offsetWidth) / 2,
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+    }
+
+    function start() {
+      if (running || reduceMotion || !mq.matches) return;
+      running = true;
+      pause.innerHTML = ICON_PAUSE;
+      pause.setAttribute('aria-label', 'Mettre le défilement en pause');
+      timer = setInterval(() => goTo(current() + 1), 5000);
+    }
+    function stop() {
+      running = false;
+      clearInterval(timer);
+      timer = null;
+      pause.innerHTML = ICON_PLAY;
+      pause.setAttribute('aria-label', 'Relancer le défilement');
+    }
+
+    pause.addEventListener('click', () => (running ? stop() : start()));
+
+    // Toute manipulation directe coupe l'avance automatique : on ne se bat
+    // jamais contre le pouce de la visiteuse.
+    ['touchstart', 'pointerdown', 'wheel', 'keydown'].forEach(ev =>
+      track.addEventListener(ev, stop, { passive: true, once: true }));
+
+    let raf = null;
+    track.addEventListener('scroll', () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => { paint(); raf = null; });
+    }, { passive: true });
+
+    // On n'anime rien tant que la section n'est pas visible.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        entries.forEach(e => (e.isIntersecting && mq.matches ? start() : (timer && stop())));
+      }, { threshold: 0.35 }).observe(track);
+    } else {
+      start();
+    }
+
+    mq.addEventListener('change', e => (e.matches ? paint() : stop()));
+    paint();
+  }
+
+  initCarousel(document.querySelector('.services__grid'), 'Nos univers de soins');
+  initCarousel(document.querySelector('.testimonials__grid'), 'Avis clientes');
+
   /* ---------- 5. ANNÉE COURANTE (footer) ---------- */
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

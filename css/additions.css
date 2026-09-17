@@ -368,3 +368,34 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
   border-top: 4.5px solid transparent;
   border-bottom: 4.5px solid transparent;
 }
+
+/* ============================================================
+   7. HERO — lisibilité du texte sur la vidéo
+   ============================================================ */
+/* Mesuré sur la vidéo : sans traitement, le contraste du titre tombe à
+   1,72:1 sur les images les plus claires — très en dessous des 4,5:1
+   exigés par WCAG AA. Les réglages ci-dessous le remontent à 5,3:1.
+   Les quatre variables se règlent en direct dans l'inspecteur. */
+:root {
+  --hero-dim:         .66;   /* luminosité de la vidéo : plus bas = plus sombre */
+  --hero-veil-top:    .52;
+  --hero-veil-middle: .50;   /* c'est ce réglage qui protège le titre */
+  --hero-veil-bottom: .70;
+}
+
+.hero__video { filter: brightness(var(--hero-dim)) saturate(.92); }
+
+.hero__overlay {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 45%,
+      rgba(45, 44, 43, .36) 0%, rgba(45, 44, 43, 0) 70%),
+    linear-gradient(180deg,
+      rgba(45, 44, 43, var(--hero-veil-top))    0%,
+      rgba(45, 44, 43, var(--hero-veil-middle)) 42%,
+      rgba(45, 44, 43, var(--hero-veil-bottom)) 100%);
+}
+
+/* Filet de sécurité : invisible sur fond sombre, décisif sur une image claire */
+.hero__title,
+.hero__lead,
+.hero__eyebrow { text-shadow: 0 1px 24px rgba(28, 26, 25, .45); }

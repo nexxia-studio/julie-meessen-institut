@@ -1,0 +1,48 @@
+{
+  "updated": null,
+  "note": "Visuels provisoires. Écrasé à chaque passage de la GitHub Action « Flux Instagram » (voir INSTAGRAM.md).",
+  "posts": [
+    {
+      "id": "placeholder-1",
+      "image": "assets/images/insta-1.webp",
+      "permalink": "https://www.instagram.com/juliemeessen.institut/",
+      "alt": "Publication Instagram de Julie Meessen Institut",
+      "isVideo": false
+    },
+    {
+      "id": "placeholder-2",
+      "image": "assets/images/insta-2.webp",
+      "permalink": "https://www.instagram.com/juliemeessen.institut/",
+      "alt": "Publication Instagram de Julie Meessen Institut",
+      "isVideo": false
+    },
+    {
+      "id": "placeholder-3",
+      "image": "assets/images/insta-3.webp",
+      "permalink": "https://www.instagram.com/juliemeessen.institut/",
+      "alt": "Publication Instagram de Julie Meessen Institut",
+      "isVideo": false
+    },
+    {
+      "id": "placeholder-4",
+      "image": "assets/images/insta-4.webp",
+      "permalink": "https://www.instagram.com/juliemeessen.institut/",
+      "alt": "Publication Instagram de Julie Meessen Institut",
+      "isVideo": false
+    },
+    {
+      "id": "placeholder-5",
+      "image": "assets/images/insta-5.webp",
+      "permalink": "https://www.instagram.com/juliemeessen.institut/",
+      "alt": "Publication Instagram de Julie Meessen Institut",
+      "isVideo": false
+    },
+    {
+      "id": "placeholder-6",
+      "image": "assets/images/insta-6.webp",
+      "permalink": "https://www.instagram.com/juliemeessen.institut/",
+      "alt": "Publication Instagram de Julie Meessen Institut",
+      "isVideo": false
+    }
+  ]
+}

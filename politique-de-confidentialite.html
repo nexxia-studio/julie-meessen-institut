@@ -37,6 +37,10 @@
 
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/additions.css" />
+  <!-- Mesure d'audience Umami : sans cookies, n'enregistre aucune donnée personnelle -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="1124ee70-fb61-4c8d-be3d-ac3a2cd8c27b"
+          data-domains="www.juliemeessen-institut.be,juliemeessen-institut.be"
+          data-do-not-track="true"></script>
 </head>
 
 <body class="page-legal">
@@ -61,7 +65,7 @@
           <li><a href="a-propos.html">À propos</a></li>
           <li>
             <a href="https://salonkee.be/salon/julie-meessen-institut?lang=fr"
-               class="nav-cta" target="_blank" rel="noopener">Réserver</a>
+               class="nav-cta" target="_blank" rel="noopener" data-umami-event="Réservation Salonkee" data-umami-event-page="confidentialité" data-umami-event-zone="en-tête">Réserver</a>
           </li>
         </ul>
       </nav>
@@ -72,7 +76,7 @@
     <section class="legal">
       <div class="legal__inner">
         <h1 class="legal__title">Politique de confidentialité</h1>
-        <p class="legal__updated">Dernière mise à jour&nbsp;: 17 septembre 2026</p>
+        <p class="legal__updated">Dernière mise à jour&nbsp;: 21 septembre 2026</p>
 
         <p>
           Cette politique explique quelles données personnelles sont traitées dans le cadre de ce site et des
@@ -83,17 +87,34 @@
         <p>
           Julie Meessen — Rue Reine Astrid 64, 4840 Welkenraedt, Belgique —
           BCE BE 1026.324.237 —
-          <a href="mailto:info@juliemeessen-institut.be">info@juliemeessen-institut.be</a> —
-          <a href="tel:+32491945741">+32 491 94 57 41</a>
+          <a href="mailto:info@juliemeessen-institut.be" data-umami-event="E-mail" data-umami-event-page="confidentialité" data-umami-event-zone="contenu">info@juliemeessen-institut.be</a> —
+          <a href="tel:+32491945741" data-umami-event="Appel téléphone" data-umami-event-page="confidentialité" data-umami-event-zone="contenu">+32 491 94 57 41</a>
         </p>
 
         <h2>Données traitées et finalités</h2>
         <ul>
-          <li><strong>Navigation sur ce site</strong>&nbsp;: aucun compte, aucun formulaire et aucun outil de mesure d'audience n'est présent. Le site lui-même ne collecte aucune donnée personnelle.</li>
+          <li><strong>Navigation sur ce site</strong>&nbsp;: aucun compte et aucun formulaire. Une mesure d'audience anonyme est en place, décrite ci-dessous&nbsp;; elle ne collecte aucune donnée permettant de vous identifier.</li>
           <li><strong>Prise de contact</strong>&nbsp;: si vous écrivez ou téléphonez à l'institut, les données que vous communiquez (nom, coordonnées, contenu du message) servent uniquement à vous répondre. Base légale&nbsp;: intérêt légitime.</li>
           <li><strong>Réservation d'un soin</strong>&nbsp;: la réservation est traitée par la plateforme Salonkee, responsable de traitement distinct. Les données du rendez-vous nous sont transmises pour l'exécution de la prestation. Base légale&nbsp;: exécution du contrat.</li>
           <li><strong>Fiche client à l'institut</strong>&nbsp;: lors d'un premier soin, des informations liées à votre peau ou à d'éventuelles contre-indications peuvent être notées afin d'adapter la prestation. Ces données restent à l'institut et ne sont jamais transmises à des tiers. Base légale&nbsp;: consentement.</li>
         </ul>
+
+        <h2>Mesure d'audience</h2>
+        <p>
+          Pour savoir quelles pages sont consultées et quels boutons sont utilisés — par exemple
+          combien de visites mènent à une réservation —, ce site utilise Umami
+          (<a href="https://umami.is" target="_blank" rel="noopener">umami.is</a>), un outil de statistiques
+          conçu pour respecter la vie privée.
+        </p>
+        <ul>
+          <li>Aucun cookie n'est déposé et rien n'est enregistré sur votre appareil.</li>
+          <li>Aucune donnée personnelle n'est conservée&nbsp;: votre adresse IP n'est pas stockée, et vous ne
+              pouvez pas être suivie d'un site à l'autre.</li>
+          <li>Seules des statistiques agrégées sont produites&nbsp;: pages vues, provenance, type d'appareil,
+              pays, et clics sur les liens de réservation, de téléphone ou d'itinéraire.</li>
+          <li>Si votre navigateur envoie le signal «&nbsp;Do Not Track&nbsp;», aucune mesure n'est effectuée.</li>
+        </ul>
+        <p>Base légale&nbsp;: intérêt légitime à comprendre l'usage du site pour l'améliorer.</p>
 
         <h2>Cookies</h2>
         <p>
@@ -106,7 +127,8 @@
         <h2>Destinataires et transferts</h2>
         <p>
           Vos données ne sont ni vendues ni cédées. Elles peuvent être traitées par nos prestataires techniques
-          dans la stricte mesure nécessaire&nbsp;: Salonkee pour la réservation et Vercel pour l'hébergement du site.
+          dans la stricte mesure nécessaire&nbsp;: Salonkee pour la réservation, Vercel pour l'hébergement du site
+          et Umami pour la mesure d'audience anonyme.
         </p>
 
         <h2>Durée de conservation</h2>
@@ -121,7 +143,7 @@
           Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de
           portabilité sur vos données, ainsi que du droit de retirer votre consentement à tout moment. Pour
           l'exercer, écrivez à
-          <a href="mailto:info@juliemeessen-institut.be">info@juliemeessen-institut.be</a>.
+          <a href="mailto:info@juliemeessen-institut.be" data-umami-event="E-mail" data-umami-event-page="confidentialité" data-umami-event-zone="contenu">info@juliemeessen-institut.be</a>.
         </p>
         <p>
           Vous pouvez également introduire une réclamation auprès de l'Autorité de protection des données,
@@ -146,8 +168,8 @@
         <address class="footer-address">
           Rue Reine Astrid 64<br />
           4840 Welkenraedt, Belgique<br />
-          <a href="tel:+32491945741">+32 491 94 57 41</a><br />
-          <a href="mailto:info@juliemeessen-institut.be">info@juliemeessen-institut.be</a>
+          <a href="tel:+32491945741" data-umami-event="Appel téléphone" data-umami-event-page="confidentialité" data-umami-event-zone="pied de page">+32 491 94 57 41</a><br />
+          <a href="mailto:info@juliemeessen-institut.be" data-umami-event="E-mail" data-umami-event-page="confidentialité" data-umami-event-zone="pied de page">info@juliemeessen-institut.be</a>
         </address>
       </div>
 
@@ -167,17 +189,17 @@
         <h3 class="footer-col__title">Suivez-nous</h3>
         <ul class="footer-social footer-social--icons">
           <li>
-            <a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener" aria-label="Instagram de Julie Meessen Institut" title="Instagram">
+            <a href="https://www.instagram.com/juliemeessen.institut/" target="_blank" rel="noopener" aria-label="Instagram de Julie Meessen Institut" title="Instagram" data-umami-event="Instagram" data-umami-event-page="confidentialité" data-umami-event-zone="pied de page">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" /><circle cx="12" cy="12" r="4.6" /><circle cx="17.6" cy="6.4" r="1.25" class="is-filled" /></svg>
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/p/Julie-Meessen-Institut-61581154431038/" target="_blank" rel="noopener" aria-label="Facebook de Julie Meessen Institut" title="Facebook">
+            <a href="https://www.facebook.com/p/Julie-Meessen-Institut-61581154431038/" target="_blank" rel="noopener" aria-label="Facebook de Julie Meessen Institut" title="Facebook" data-umami-event="Facebook" data-umami-event-page="confidentialité" data-umami-event-zone="pied de page">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.6 21.5v-8.2h2.8l.42-3.25H14.6V7.97c0-.94.26-1.58 1.61-1.58h1.72V3.48a23.2 23.2 0 0 0-2.5-.13c-2.48 0-4.18 1.51-4.18 4.29v2.39H8.44v3.25h2.81v8.2z" class="is-filled" /></svg>
             </a>
           </li>
           <li>
-            <a href="https://salonkee.be/salon/julie-meessen-institut?lang=fr" target="_blank" rel="noopener" aria-label="Réserver un soin en ligne sur Salonkee" title="Réserver sur Salonkee">
+            <a href="https://salonkee.be/salon/julie-meessen-institut?lang=fr" target="_blank" rel="noopener" aria-label="Réserver un soin en ligne sur Salonkee" title="Réserver sur Salonkee" data-umami-event="Réservation Salonkee" data-umami-event-page="confidentialité" data-umami-event-zone="pied de page">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2.5" /><path d="M3 10h18M8 3v4M16 3v4" /><path d="M9.6 15.3l1.7 1.7 3.3-3.4" /></svg>
             </a>
           </li>

@@ -821,23 +821,12 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
 /* ============================================================
    15. AVIS — bouton « Laisser un avis sur Google »
    ============================================================ */
-/* Orienté vers Google plutôt que Salonkee : ce sont les avis Google qui
-   pèsent dans le classement local (carte et « pack local »). */
+/* Bouton standard du site (.btn .btn--primary), sans variante :
+   seul l'empilement bouton + lien est propre à cette section. */
 .testimonials__cta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-}
-.btn--review {
-  display: inline-flex;
-  align-items: center;
-  gap: .6rem;
-}
-.btn--review svg {
-  width: 15px;
-  height: 15px;
-  fill: currentColor;
-  flex: 0 0 auto;
+  gap: 1.1rem;
 }
 .testimonials__more { margin: 0; font-size: .88rem; font-weight: 300; }

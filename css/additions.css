@@ -830,3 +830,78 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
   gap: 1.1rem;
 }
 .testimonials__more { margin: 0; font-size: .88rem; font-weight: 300; }
+
+/* ============================================================
+   16. PAGE 404
+   ============================================================ */
+.notfound {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: stretch;
+  background: var(--cream);
+}
+.notfound__media { position: relative; overflow: hidden; }
+.notfound__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.notfound__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(28, 26, 25, .08), rgba(28, 26, 25, .22));
+}
+.notfound__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: calc(var(--section-y) + 4rem) clamp(2rem, 6vw, 6rem) var(--section-y);
+  max-width: 640px;
+}
+.notfound__code {
+  font-family: var(--font-display);
+  font-size: clamp(5.5rem, 13vw, 10rem);
+  line-height: .9;
+  color: var(--accent-2, var(--accent));
+  opacity: .5;
+  margin: 0 0 1.4rem;
+}
+.notfound__eyebrow {
+  font-size: .72rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .9rem;
+}
+.notfound__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+  margin-bottom: 1.2rem;
+}
+.notfound__lead {
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 44ch;
+  margin-bottom: 2rem;
+}
+.notfound__links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.4rem;
+  display: grid;
+  gap: .8rem;
+}
+
+@media (max-width: 860px) {
+  .notfound { grid-template-columns: 1fr; min-height: 0; }
+  .notfound__media { height: 42vh; min-height: 260px; }
+  .notfound__body { padding: 2.6rem var(--gutter) var(--section-y); max-width: none; }
+  .notfound__code { font-size: 5rem; margin-bottom: .8rem; }
+}

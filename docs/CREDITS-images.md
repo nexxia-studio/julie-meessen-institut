@@ -9,16 +9,16 @@ Ce dossier est exclu du déploiement (voir `.vercelignore`).
 |---|---|---|
 | `service-visage.webp` | Visuel de marque Méthode Physiodermie, fourni par le distributeur | Usage accordé au distributeur |
 | `service-corps.webp` | Visuel de marque Gemology (« Douceur minérale »), fourni par le distributeur | Usage accordé au distributeur |
-| `service-massages.webp` | rawpixel — https://www.rawpixel.com/image/5924895 | CC0 1.0 |
-| `service-mains.webp` | rawpixel — https://www.rawpixel.com/image/6036048 | CC0 1.0 |
-| `service-maquillage.webp` | rawpixel — https://www.rawpixel.com/image/5906913 | CC0 1.0 |
-| `service-epilations.webp` | Photo de l'institut (Instagram de Julie) | Propriété de l'institut |
+| `service-massages.webp` | Visuel fourni par Nexxia Studio (`massage.jpg`) | À documenter |
+| `service-epilations.webp` | Visuel fourni par Nexxia Studio (`epilations.jpg`) | À documenter |
+| `service-mains.webp` | Visuel fourni par Nexxia Studio (`ongles.jpg`) | À documenter |
+| `service-maquillage.webp` | Visuel fourni par Nexxia Studio (`maquillage.jpg`) | À documenter |
 
 CC0 1.0 : https://creativecommons.org/publicdomain/zero/1.0/ — usage commercial
 autorisé, aucune attribution requise. Licence recoupée via l'API Openverse le 17/09/2026.
 
-Tous les visuels sont recadrés en 900 × 675 et étalonnés avec le même traitement
-(saturation et contraste réduits, léger voile chaud) pour rester cohérents entre eux.
+Tous les visuels sont recadrés en 900 × 675, sans retouche. Leur harmonisation est
+faite en CSS par un voile sombre commun (`--card-veil` dans `css/additions.css`).
 
 ## Cartographie
 

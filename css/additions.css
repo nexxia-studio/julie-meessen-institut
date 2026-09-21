@@ -438,7 +438,7 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
 
 /* Sans survol (tactile), le logo n'apparaîtrait jamais : on l'affiche
    discrètement sous le texte plutôt que de le cacher pour de bon. */
-@media (hover: none) {
+@media (hover: none) and (min-width: 721px) {
   .brand-card { min-height: 0; }
   .brand-card__logo {
     position: static;
@@ -674,3 +674,55 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
 .carousel-pause:hover,
 .carousel-pause:focus-visible { color: var(--ink); border-color: var(--accent); }
 .carousel-pause svg { width: 11px; height: 11px; fill: currentColor; }
+
+/* ============================================================
+   12. MARQUES SUR MOBILE — le logo tient lieu de titre
+   ============================================================ */
+/* Sans survol possible, afficher le logo ET le nom faisait doublon.
+   Le logo passe en haut, le nom est retiré de l'affichage mais reste
+   dans le document : Google continue de l'indexer et les lecteurs
+   d'écran l'annoncent toujours. */
+@media (max-width: 720px) {
+  .brand-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .9rem;
+    padding: 1.6rem 1rem 1.4rem;
+  }
+
+  .brand-card__logo {
+    order: -1;
+    position: static;
+    transform: none;
+    opacity: 1;
+    width: min(78%, 132px);
+    max-height: 54px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 0 .2rem;
+  }
+
+  .brand-card__body { display: flex; flex-direction: column; gap: .3rem; }
+
+  /* Retiré de l'écran, conservé pour l'indexation et l'accessibilité */
+  .brand-card__name {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .brand-card__origin { font-size: .7rem; letter-spacing: .16em; }
+  .brand-card__desc   { font-size: .83rem; line-height: 1.55; margin: 0; }
+
+  /* Plus de bascule au survol : le logo est déjà là en permanence */
+  .brand-card:hover .brand-card__body,
+  .brand-card:focus-within .brand-card__body { opacity: 1; }
+  .brand-card:hover,
+  .brand-card:focus-within { background: var(--cream-2); }
+}

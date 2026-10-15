@@ -43,7 +43,7 @@ Tarifs TTC, susceptibles d'évoluer. Le détail complet figure sur la page Soins
 
 - [Accueil](https://www.juliemeessen-institut.be/): présentation de l'institut, prestations, avis clients, horaires, accès et questions fréquentes
 - [Soins et tarifs](https://www.juliemeessen-institut.be/menu-de-soins.html): carte complète des soins avec durées et prix
-- [Conseil et vente](https://www.juliemeessen-institut.be/conseil-et-vente.html): conseil personnalisé, marques disponibles à l'institut, protection contre la lumière bleue
+- [Conseil et vente](https://www.juliemeessen-institut.be/conseil-et-vente.html): conseil personnalisé, marques disponibles à l'institut, routine visage avec la Méthode Physiodermie
 - [À propos](https://www.juliemeessen-institut.be/a-propos.html): l'institut et sa façon de travailler
 
 ## Optionnel

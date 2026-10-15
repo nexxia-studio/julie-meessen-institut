@@ -12,12 +12,12 @@ Ce dossier est exclu du déploiement (voir `.vercelignore`).
 | `service-massages.webp` | Visuel fourni par Nexxia Studio (`massage.jpg`) | À documenter |
 | `service-epilations.webp` | Visuel fourni par Nexxia Studio (`epilations.jpg`) | À documenter |
 | `service-mains.webp` | Visuel fourni par Nexxia Studio (`ongles.jpg`) | À documenter |
-| `service-maquillage.webp` | Visuel fourni par Nexxia Studio (`maquillage.jpg`) | À documenter |
+| `service-regard.webp` | « Eye Lashes », Sara Pavic, StockSnap — https://stocksnap.io/photo/eye-lashes-AMJLFXPXTM (teinte chaude ajoutée) | CC0 1.0 |
 
 CC0 1.0 : https://creativecommons.org/publicdomain/zero/1.0/ — usage commercial
 autorisé, aucune attribution requise. Licence recoupée via l'API Openverse le 17/09/2026.
 
-Tous les visuels sont recadrés en 900 × 675, sans retouche. Leur harmonisation est
+Tous les visuels sont recadrés en 900 × 675, sans retouche (sauf `service-regard.webp`, passée en teinte chaude pour s'accorder aux autres vignettes). Leur harmonisation est
 faite en CSS par un voile sombre commun (`--card-veil` dans `css/additions.css`).
 
 ## Cartographie

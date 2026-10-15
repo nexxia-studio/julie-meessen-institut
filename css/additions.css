@@ -489,7 +489,7 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
    10. PAGE CONSEIL & VENTE — bento des maisons
    ============================================================ */
 /* La place de chaque maison reflète son poids réel dans l'activité :
-   Physiodermie occupe quatre fois la surface de Ouate. */
+   Physiodermie occupe la plus grande surface. */
 .bento {
   max-width: var(--container);
   margin: 0 auto;
@@ -904,4 +904,20 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
   .notfound__media { height: 42vh; min-height: 260px; }
   .notfound__body { padding: 2.6rem var(--gutter) var(--section-y); max-width: none; }
   .notfound__code { font-size: 5rem; margin-bottom: .8rem; }
+}
+
+/* ---------- Grilles ajustées (oct. 2026) --------------------
+   Grille de maisons à deux cartes, et cellule de bento pleine
+   largeur pour la dernière maison de la page Conseil & vente. */
+.brands__grid--two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 380px) { .brands__grid--two { grid-template-columns: 1fr; } }
+
+.bento__cell--wide { grid-column: span 6; min-height: 170px; }
+@media (max-width: 860px) { .bento__cell--wide { grid-column: span 2; min-height: 160px; } }
+@media (max-width: 420px) { .bento__cell--wide { grid-column: span 1; min-height: 0; } }
+
+/* Grille de trois maisons affichée sur deux colonnes : la dernière
+   carte prend toute la largeur au lieu de laisser une case vide. */
+@media (min-width: 381px) and (max-width: 1024px) {
+  .brands__grid--three > .brand-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }

@@ -24,3 +24,11 @@ faite en CSS par un voile sombre commun (`--card-veil` dans `css/additions.css`)
 
 `map-welkenraedt.webp` — tuiles © OpenStreetMap contributors, licence ODbL.
 L'attribution est incrustée dans l'image et ne doit pas être retirée.
+
+## Photos ajoutées en octobre 2026 (branche `photos-produits`)
+
+| Fichier | Source | Licence |
+|---|---|---|
+| `julie-portrait.webp` | Portrait de Julie Meessen, fourni par Nexxia Studio | Usage accordé par la personne photographiée |
+| `routine-visage.webp` | Visuel Méthode Physiodermie (miroir, émulsions), fourni par Nexxia Studio | À confirmer auprès du distributeur |
+| `produits/*.webp` | Visuels de marque Physiodermie, Gemology, Ouate, Substance of Light, Marc Inbane, fournis par Nexxia Studio | À confirmer auprès des distributeurs |

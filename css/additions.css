@@ -921,3 +921,8 @@ body.page-legal .site-header .nav-toggle span { background: var(--ink); }
 @media (min-width: 381px) and (max-width: 1024px) {
   .brands__grid--three > .brand-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
+
+/* Deux maisons côte à côte sur la dernière rangée du bento. */
+.bento__cell--half { grid-column: span 3; min-height: 170px; }
+@media (max-width: 860px) { .bento__cell--half { grid-column: span 1; min-height: 160px; } }
+@media (max-width: 420px) { .bento__cell--half { grid-column: span 1; min-height: 0; } }

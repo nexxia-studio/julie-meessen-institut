@@ -24,3 +24,7 @@ faite en CSS par un voile sombre commun (`--card-veil` dans `css/additions.css`)
 
 `map-welkenraedt.webp` — tuiles © OpenStreetMap contributors, licence ODbL.
 L'attribution est incrustée dans l'image et ne doit pas être retirée.
+
+## Image de partage (Open Graph)
+
+`og-image.jpg` (1200 × 630) : visuel Méthode Physiodermie « soin du visage » (même source que `service-visage.webp`), logo et mention « Institut de beauté · Welkenraedt » ajoutés. Remplacée le 27/10/2026 à la demande de Julie.
